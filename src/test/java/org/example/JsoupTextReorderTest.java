@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class JsoupTextReorderTest {
     @Test
-    public void foo() throws IOException {
+    public void testTextReorder() throws IOException {
         var jsoupDoc = Jsoup.parse(getClass().getResourceAsStream("/input.html"), null, "");
         var text = jsoupDoc.body().text();
         assertEquals("TEXT-AAA TEXT-BBB TEXT-CCC TEXT-DDD", text);
